@@ -23,7 +23,6 @@ export default class Routes {
                 if (resultOrError.isFailure) return res.status(401).json({ message: resultOrError.error })
                 return res.json({})
             } catch (error) {
-                console.log(error)
                 return res.status(500).json({ message: 'Ocorreu um erro inesperado.' })
             }
         });

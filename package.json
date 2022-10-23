@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsc && nodemon dist/src/main",
-    "test": "tsc && jest ./dist"
+    "test": "tsc && jest ./dist",
+    "build": "tsc",
+    "prisma": "npx prisma studio"
   },
   "repository": {
     "type": "git",

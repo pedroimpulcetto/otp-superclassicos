@@ -6,6 +6,7 @@ export default class GenerateCode {
 
     async execute(userId: string, userPhone: string, dateNow: Date): Promise<OTPCode> {
         const codeByUser = await this.otpRepository.getByUserId(userId)
+
         if (codeByUser) {
             await this.otpRepository.invalidateCode(codeByUser.id)
         }

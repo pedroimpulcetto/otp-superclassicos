@@ -25,7 +25,6 @@ export default class OTPController {
         const httpSender = new Twilio()
         const httpUseCase = new SendSMS(httpSender)
         const response = await httpUseCase.execute(code.otpCode, code.userPhone, from)
-        console.log({ response })
         if (response?.errorCode !== null) return Result.fail('Número de telefone inválido.')
         return Result.ok(code)
     }

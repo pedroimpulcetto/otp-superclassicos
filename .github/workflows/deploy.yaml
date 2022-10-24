@@ -4,9 +4,9 @@ on:
     types:
       - closed
 jobs:
-  build:
-    if_merged:
-      if: github.event.pull_request.merged == true
+  if_merged:
+    if: github.event.pull_request.merged == true
+    build:
       runs-on: ubuntu-latest
       steps:
         - name: Download task definition

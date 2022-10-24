@@ -29,7 +29,7 @@ jobs:
           ECR_REPOSITORY: otp
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          pws
+          pwd
           ls -la
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG ../Dockerfile
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG

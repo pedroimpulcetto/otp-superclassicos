@@ -10,7 +10,7 @@ export default class SMS {
     }
 
     message() {
-        return `Seu código de acesso ao App Corneteiro é: ${this.code}`
+        return `${this.code} é seu código de verificação do App Corneteiro.`
     }
 
     to() {

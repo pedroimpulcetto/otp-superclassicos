@@ -14,5 +14,5 @@ test('should generate a code', () => {
     const code = useCase.execute(input.user_id, input.user_phone, now)
 
 
-    expect(otpRepositoryMemory.codes.length).toBe(2)
+    expect(otpRepositoryMemory.codes.length).toBe(1)
 })
